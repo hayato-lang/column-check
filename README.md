@@ -38,9 +38,9 @@
 
 ### Associations
 
-belongs_to :user
-belongs_to :post
-has_many :likes
+- belongs_to :user
+- belongs_to :post
+- has_many :likes
 
 ## likes テーブル
 
@@ -50,6 +50,6 @@ has_many :likes
 | post    | references | null: false, foreign_key: true | 
 | comment | references | null: false, foreign_key: true | 
 
-belongs_to :user
-belongs_to :post
-belongs_to :comment
+- belongs_to :user
+- belongs_to :post
+- belongs_to :comment
