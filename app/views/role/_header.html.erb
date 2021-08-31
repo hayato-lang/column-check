@@ -1,0 +1,15 @@
+<header id="title-wrapper">
+  <div class="red-title">Column<span class="orange-title">Check</span></div>
+  <form id="header-where" action="/input/" method="get">
+    <input type="text" id="top-input" name='i' placeholder="検索したいカラム名を入力してください">
+    <button></button>
+  </form>
+  <div class="menu-right">
+  <% if user_signed_in? %>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+  <% else %>
+    <li><%= link_to 'ログイン', new_user_session_path, class: 'login' %></li>
+    <li><%= link_to 'サインイン', new_user_registration_path, class: 'signin' %></li>
+  <% end %>
+  </div>
+</header>
