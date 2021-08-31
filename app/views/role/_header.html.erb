@@ -1,11 +1,12 @@
-<header id="title-wrapper">
+<header id="header-wrapper">
   <div class="red-title">Column<span class="orange-title">Check</span></div>
   <form id="header-where" action="/input/" method="get">
     <input type="text" id="top-input" name='i' placeholder="検索したいカラム名を入力してください">
-    <button></button>
+    <button class="search-btn">検索</button>
   </form>
-  <div class="menu-right">
+  <ul class="header-right">
   <% if user_signed_in? %>
+    <li><%= link_to '投稿する', '#', class: 'post-btn' %></li>
     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
   <% else %>
     <li><%= link_to 'ログイン', new_user_session_path, class: 'login' %></li>

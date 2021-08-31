@@ -1,0 +1,57 @@
+#header-wrapper {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.red-title {
+  color: red;
+  font-size: 25px;
+  margin-left: 0.9em;
+}
+
+.orange-title {
+  color: #FF6E00;
+}
+
+#top-input {
+  margin-left: 20px;
+  border-color: #FF6E00;
+  font-size: 0.75em;
+  color: #535353;
+  padding: 0 0 1px 0.667em;
+  width: 18.25em;
+  font-family: inherit;
+  vertical-align: text-bottom;
+  height: 21px;
+  margin-right: 0.5em;
+}
+
+.search-btn {
+  height: 25px;
+  vertical-align: text-bottom;
+}
+
+.header-right {
+  float: right;
+  display: flex;
+  margin-right: 26px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  right: 0;
+  left: auto;
+  list-style: none;
+}
+
+.post-btn, .logout, .login, .signin {
+  color: #FF6E00;
+  list-style: none;
+  border:1px solid #FF6E00;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.post-btn, .login {
+  margin-right: 21px;
+}
