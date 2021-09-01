@@ -1,0 +1,20 @@
+.theme-wrapper {
+  height: 350px;
+  background-color: #F96932;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-title, #theme-detail {
+  color: white;
+}
+
+#theme-title {
+  font-size: 40px;
+}
+
+#theme-detail {
+  font-size: 16px;
+}
