@@ -9,3 +9,18 @@
     </p>
   </div>
 </div>
+
+<div class="post-index">
+  <ul class='post-lists'>
+    <% @posts.each do |post| %>
+      <li class="list">
+        <%= link_to '#' do %>
+        <div class="post-info">
+          <%= post.title %>
+          <%= post.description %>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,5 +1,7 @@
 <header id="header-wrapper">
-  <div class="red-title">Column<span class="orange-title">Check</span></div>
+  <%= link_to root_path, id:"root-path" do %>
+    <div class="red-title">Column<span class="orange-title">Check</span></div>
+  <% end %>
   <form id="header-where" action="/input/" method="get">
     <input type="text" id="top-input" name='i' placeholder="検索したいカラム名を入力してください">
     <button class="search-btn">検索</button>
