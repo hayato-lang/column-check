@@ -18,3 +18,29 @@
 #theme-detail {
   font-size: 16px;
 }
+
+.list {
+  list-style: none;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  height: 70px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.post-lists {
+  padding-top: 30px;
+}
+
+.column-title, .column-description {
+  color: #777777;
+}
+
+.column-title {
+  font-weight: bold;
+}
+
+.column-description {
+  margin-top: 3px;
+}

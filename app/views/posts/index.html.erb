@@ -10,17 +10,20 @@
   </div>
 </div>
 
-<div class="post-index">
-  <ul class='post-lists'>
-    <% @posts.each do |post| %>
-      <li class="list">
-        <%= link_to '#' do %>
-        <div class="post-info">
+<ul class='post-lists'>
+  <% @posts.each do |post| %>
+    <li class="list">
+     <%# '#'にはカラムの詳細表示へ遷移するパスを記述してください %>
+      <%= link_to '#' do %>
+      <div class="column-info">
+        <div class="column-title">
           <%= post.title %>
+        </div>
+        <div class="column-description">
           <%= post.description %>
         </div>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-</div>
+      </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

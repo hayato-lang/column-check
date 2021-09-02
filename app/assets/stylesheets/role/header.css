@@ -4,16 +4,10 @@
   align-items: center;
   height: 45px;
 }
-
-#root-path {
-  text-decoration: none;
-}
-
 .red-title {
   color: red;
   font-size: 25px;
   margin-left: 0.9em;
-  text-decoration: none;
 }
 
 .orange-title {
@@ -55,7 +49,6 @@
   list-style: none;
   border:1px solid #FF6E00;
   padding: 7px;
-  text-decoration: none;
 }
 
 .post-btn, .login {
