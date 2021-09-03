@@ -1,0 +1,17 @@
+<%= render 'role/header' %>
+
+<div class="post-content">
+  <div class="posts-wrapper">
+    <div class="post-red-title">Column<span class="post-orange-title">Check</span></div>
+    <div class="post-form">
+      <%= form_with model: @post, url: posts_path, local: true do |f| %>
+      <%= render 'shared/error_messages', model:f.object %>
+      <div class="new-post">
+        <%= f.text_area :title, class: "post-text", id: "post-title", placeholder: "知りたいカラム名や変数名を入力してください" %>
+        <%= f.text_area :description, class: "post-text", id: "post-description", placeholder: "詳細説明を入力してください。" %>
+        <%= f.submit "投稿する", id:"submit-btn" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

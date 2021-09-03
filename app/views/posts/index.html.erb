@@ -1,8 +1,29 @@
-<h2>トップページ</h2>
-  <% if user_signed_in? %>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-  <% else %>
-    <li><%= link_to 'ログイン', new_user_session_path %></li>
-    <li><%= link_to '新規登録', new_user_registration_path %></li>
+<%= render 'role/header' %>
+<div class = 'theme-wrapper'>
+  <div class = "theme-content">
+    <p id = "theme-title">カラムチェック</p>
+    <p id = "theme-detail">
+      Webアプリケーション作成時や、スキルチェックの際の変数の命名に困った際は
+      質問してみよう。<br>また、投稿されたカラムについて自分ならどう名付けるのかを
+      コメントすることで仲間の助けになる！
+    </p>
+  </div>
+</div>
+
+<ul class='post-lists'>
+  <% @posts.each do |post| %>
+    <li class="list">
+     <%# '#'にはカラムの詳細表示へ遷移するパスを記述してください %>
+      <%= link_to '#' do %>
+      <div class="column-info">
+        <div class="column-title">
+          <%= post.title %>
+        </div>
+        <div class="column-description">
+          <%= post.description %>
+        </div>
+      </div>
+      <% end %>
+    </li>
   <% end %>
-  
+</ul>
