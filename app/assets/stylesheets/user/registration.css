@@ -1,10 +1,10 @@
 .form-wrap {
-  width: 50%;
+  width: 100%;
   background-color: white;
   padding-bottom: 70px;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
 }
 
 .form-header {
@@ -21,15 +21,18 @@
 }
 
 .form-group {
-  width: 50%;
+  width: 70%;
   display: flex;
+  border: 1px solid gray;
   flex-direction: column;
-  margin: 0 auto;
-  justify-content: flex-start;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-text-wrap {
-  width: 100%;
+  margin-top: 10px;
+  width: 60%;
   height: 20%;
 }
 
@@ -51,20 +54,21 @@
 }
 
 .register-btn {
-  width: 50%;
-  margin: 0 auto;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .register-red-btn {
-  width: 80%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  width: 150px;
+  background: #ffc230;
+  border: 1px solid #ffc230;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
   margin-top: 20px;
-  
+  font-weight: bold;
 }
 
 .indispensable {

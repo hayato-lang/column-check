@@ -1,15 +1,16 @@
 .login-btn {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .login-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #ffc230;
+  border: 1px solid #ffc230;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
+  font-weight: bold;
 }
