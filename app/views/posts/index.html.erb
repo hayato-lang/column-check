@@ -14,7 +14,7 @@
   <% @posts.each do |post| %>
     <li class="list">
      <%# '#'にはカラムの詳細表示へ遷移するパスを記述してください %>
-      <%= link_to '#' do %>
+      <%= link_to(post_path(post.id),method: :get)  do %>
       <div class="column-info">
         <div class="column-title">
           <%= post.title %>
