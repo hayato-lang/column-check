@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, except:[:create]
   def create
-    Comment.create(comment_params)
+    comment = Comment.create(comment_params)
+    redirect_to post_path(comment.post.id)
   end
 
   private

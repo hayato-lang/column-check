@@ -18,3 +18,27 @@
     </table>
   </div>
 </div>
+  <div class="comment-wrapper">
+    <% if user_signed_in? %>
+    <div class="comment-form">
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする",row: 4, class: "comment-input" %>
+        <%= form.submit "SEND", class: "comment-submit" %>
+      <% end %>
+    </div>
+    <% end %>
+
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+      <div class="comment-show">
+        <p class ="comment-name">
+          <%=comment.user.name %>
+        </p>
+        <p class="comment-text">
+          <%= comment.text %>          
+        </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
