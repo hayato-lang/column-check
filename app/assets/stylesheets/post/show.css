@@ -45,24 +45,24 @@ padding: 5vh 0;
 
 
 .detail-table {
-  width: 40%;
-  margin-left: 45%;
-  margin-right: 15%;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 45%;
 }
 
 .detail-post {
   width: 20%;
-  background-color: #eee;
-  border: 1px solid #dedede;
+  background-color: #f5a789;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
 }
 
 .detail-value {
   width: 80%;
   padding: 10px;
-  border: 1px solid #dedede;
-  font-size: 14px;
+  border: 1px solid gray;
+  margin: 0 -1px 0 -1px;
+  font-size: 20px;
 }
 /* コメント */
 .comment-wrapper {
