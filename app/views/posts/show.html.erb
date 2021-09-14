@@ -1,19 +1,20 @@
 <%= render 'role/header' %>
 <div class="post-show">
-  <div class="post-red-title">Column<span class="post-orange-title">Check</span></div>
-  <div class="posts-box">
-    <h2 class="post-name">
-      <%= "#{@post.title}"%><span class="post-orange-name">に適切なカラム名をつけてください</span>
-    </h2>
-    <div class="post-explain-box">
-      <span><%= @post.description %></span>
-    </div>
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-post">投稿者</th>
-          <td class="detail-value"><%= @post.user.name %></td>
+          <th class="detail-post">カラム名</th>
         </tr>
+        <tr>
+          <td class="detail-value"><%= @post.title %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">詳細</th>
+        </tr>
+        <tr>
+          <td class="detail-value"><%= @post.description %></td>
+        </tr>
+
       </tbody>
     </table>
   </div>
