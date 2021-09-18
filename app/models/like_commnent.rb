@@ -1,0 +1,2 @@
+class LikeCommnent < ApplicationRecord
+end
