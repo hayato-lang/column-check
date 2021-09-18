@@ -1,0 +1,2 @@
+class LikeCommentsController < ApplicationController
+end
