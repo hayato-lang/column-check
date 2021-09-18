@@ -8,5 +8,6 @@ class User < ApplicationRecord
           validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
   has_many :posts
   has_many :comments
-  has_many :likes
+  has_many :like_comments
+  has_many :like_posts
 end
