@@ -15,6 +15,9 @@
           <td class="detail-value"><%= @post.description %></td>
         </tr>
       </tbody>
+      <tr id="like_posts_buttons">
+        <%= render partial: 'like_posts/like', locals: {post: @post} %>
+      </tr>
     </table>
   </div>
 </div>
