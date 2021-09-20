@@ -1,11 +1,16 @@
 class LikePostsController < ApplicationController
+  before_action :post_params
   def create
-    @post = Post.find(params[:post])
-    current_user.like(@comment)
+    Like.create(user_id: current_user.id, post_id: params[:id])
   end
-
+  
   def destroy
-    @post = Like.find(params[:id]).post
-    current_user.unlike(@post)
-  end  
+    Like.find_by(user_id: current_user.id, post_id: params[:id]).destroy
+  end
+  
+  private
+  
+  def post_params
+    @post = Post.find(params[:id])
+  end
 end
