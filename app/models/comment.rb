@@ -4,4 +4,3 @@ class Comment < ApplicationRecord
   has_many :like_comments
   validates :text, presence: true
 end
-
