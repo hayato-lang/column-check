@@ -63,3 +63,4 @@ group :development do
 end
 
 gem 'pry-rails'
+gem 'jquery-rails'
