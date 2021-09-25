@@ -24,6 +24,14 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user).order('created_at DESC')
   end
 
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :description).merge(user_id: current_user.id)
