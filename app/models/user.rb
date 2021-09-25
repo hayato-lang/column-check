@@ -15,7 +15,8 @@ class User < ApplicationRecord
     like_posts.where(post_id: post_id).exists?
   end
 
-  # def liked_comment_by?(comment_id)
-  #   like_comments.where(comment_id: comment_id).exists?
-  # end
+  def liked_comment_by?(comment_id)
+    like_comments.where(comment_id: comment_id).exists?
+  end
+
 end

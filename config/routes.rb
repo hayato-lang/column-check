@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "posts#index"
   resources :posts, only: [:index, :new, :create, :show] do
-    resources :comments, only: :create 
+    resources :comments, only: :create
   end
 
   post 'like_post/:id' => 'like_posts#create', as: 'create_like_post'

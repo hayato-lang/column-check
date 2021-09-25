@@ -1,4 +1,4 @@
-class LikeCommnent < ApplicationRecord
+class LikeComment < ApplicationRecord
   belongs_to :comment
   belongs_to :user
 end

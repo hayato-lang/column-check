@@ -42,9 +42,9 @@
           <p class="comment-text">
             <%= comment.text %>          
           </p>
-          <%# <div id='like_comments_buttons_<%= comment.id'>
+          <div id='like_comments_buttons_<%= comment.id %>'> 
             <%= render partial: 'like_comments/like', locals: {comment: comment} %>
-          <%# </div> %>
+         </div>
         </div>
       </div>
       <% end %>
