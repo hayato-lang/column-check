@@ -18,5 +18,4 @@ class User < ApplicationRecord
   def liked_comment_by?(comment_id)
     like_comments.where(comment_id: comment_id).exists?
   end
-
 end
