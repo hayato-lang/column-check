@@ -40,11 +40,11 @@
         </p>
         <div class="comment">
           <p class="comment-text">
-            <%= comment.text %>          
+            <%= comment.text %>         
           </p>
-          <div id='like_comments_buttons_<%= comment.id %>'> 
-            <%= render partial: 'like_comments/like', locals: {comment: comment} %>
-         </div>
+          <div id='like_comments_buttons_<%= comment.id %>'>
+            <%= render partial: 'like_comments/like', locals: {comment: comment} %> 
+          </div>
         </div>
       </div>
       <% end %>

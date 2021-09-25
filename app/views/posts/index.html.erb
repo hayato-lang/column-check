@@ -16,7 +16,7 @@
       <%= link_to(post_path(post.id),method: :get)  do %>
       <div class="column-info">
         <div class="column-title">
-          <%= post.title %>
+          <%= post.title %><span class="fa fa-heart index-like"><%= post.like_posts.count %></span>
         </div>     
         <div class="column-description">
           <%= post.description %>
