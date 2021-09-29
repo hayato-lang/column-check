@@ -1,7 +1,7 @@
 <%= render 'role/header' %>
 <div class="post-show">
     <table class="detail-table">
-      <tbody>
+      <tbody> 
         <tr>
           <th class="detail-post">カラム名</th>
         </tr>
@@ -14,8 +14,10 @@
         <tr>
           <td class="detail-value"><%= @post.description %></td>
         </tr>
-
       </tbody>
+      <tr id='like_posts_buttons_<%= @post.id %>'>
+        <%= render partial: 'like_posts/like', locals: {post: @post} %>
+      </tr>
     </table>
   </div>
 </div>
@@ -36,9 +38,14 @@
         <p class ="comment-name">
           <%=comment.user.name %>
         </p>
-        <p class="comment-text">
-          <%= comment.text %>          
-        </p>
+        <div class="comment">
+          <p class="comment-text">
+            <%= comment.text %>         
+          </p>
+          <div id='like_comments_buttons_<%= comment.id %>'>
+            <%= render partial: 'like_comments/like', locals: {comment: comment} %> 
+          </div>
+        </div>
       </div>
       <% end %>
     </div>
