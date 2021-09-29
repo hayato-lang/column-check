@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_post, only: [:show]
+  before_action :authenticate_user!, except:[:index, :show]
+  before_action :set_post, only: [:show, :edit, :update,:destroy]
+  before_action :set_post_user, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.includes(:user).order('created_at DESC')
@@ -24,6 +25,23 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user).order('created_at DESC')
   end
 
+  def edit
+    
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to action: :show
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to root_path
+  end
+
   private
 
   def post_params
@@ -32,5 +50,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+  def set_post_user
+    if @post.user != current_user
+      redirect_to root_path
+    end
   end
 end

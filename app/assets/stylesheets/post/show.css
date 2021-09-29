@@ -64,6 +64,30 @@ padding: 5vh 0;
   margin: 0 -1px 0 -1px;
   font-size: 20px;
 }
+
+.post-edit-btn {
+  display: block;
+  margin: 10px auto;
+  background-color: #F96932;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  font-size: 28px;
+  padding: 5px;
+}
+
+
+.post-destroy {
+  display: block;
+  padding: 3px;
+  margin: 10px auto;
+  background-color: #737373;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+}
+
 /* コメント */
 .comment-wrapper {
   margin: 0 auto;
