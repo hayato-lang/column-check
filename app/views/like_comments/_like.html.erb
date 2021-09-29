@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+ <% if current_user.liked_comment_by?(comment.id) %>
+   <td>
+    <%= link_to destroy_like_comment_path(comment), method: :DELETE, remote: true do %>
+    <div class="like-comment-count">
+      <span class="fa fa-heart like-btn"><%= comment.like_comments.count %>
+    </div>
+    <% end %>
+  </td>
+ <% else %>
+   <td>
+    <%= link_to create_like_comment_path(comment), method: :POST, remote: true do %>
+    <div class="like-comment-count">
+      <span class="fa fa-heart-o like-btn"><%= comment.like_comments.count %>
+    </div>
+    <% end %>
+  </td>
+ <% end %>
+<% end %>

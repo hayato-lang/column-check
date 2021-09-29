@@ -20,7 +20,7 @@ RSpec.describe Post, type: :model do
       it 'desprictionが空では投稿できない' do
         @post.description = ''
         @post.valid?
-        expect(@post.errors.full_messages).to include("Description can't be blank")        
+        expect(@post.errors.full_messages).to include("Description can't be blank")
       end
       it 'ユーザーが紐づいていなければ投稿できない' do
         @post.user = nil
