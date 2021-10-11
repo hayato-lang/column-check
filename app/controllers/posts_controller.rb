@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except:[:index, :show]
-  before_action :set_post, only: [:show, :edit, :update,:destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :set_post_user, only: [:edit, :update, :destroy]
 
   def index
@@ -26,7 +26,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
@@ -51,9 +50,8 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
+
   def set_post_user
-    if @post.user != current_user
-      redirect_to root_path
-    end
+    redirect_to root_path if @post.user != current_user
   end
 end
