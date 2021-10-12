@@ -1,4 +1,6 @@
 <%= render 'role/header' %>
+
+<%# 投稿詳細 %>
 <div class="post-show">
     <table class="detail-table">
       <tbody> 
@@ -26,6 +28,9 @@
       <% end %>
   </div>
 </div>
+<%# 投稿詳細 %>
+
+<%# コメントフォーム %>
   <div class="comment-wrapper">
     <% if user_signed_in? %>
     <div class="comment-form">
@@ -35,7 +40,9 @@
       <% end %>
     </div>
     <% end %>
+<%# コメントフォーム %>
 
+<%# コメント一覧 %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
@@ -53,5 +60,6 @@
         </div>
       </div>
       <% end %>
+<%# コメント一覧 %>
     </div>
   </div>
